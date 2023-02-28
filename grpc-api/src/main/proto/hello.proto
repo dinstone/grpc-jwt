@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.dinstone.grpc.hello.api";
+option java_outer_classname = "HelloProto";
+import "google/protobuf/wrappers.proto";
+
+package hello;
+
+service HelloService{
+  rpc sayHello(google.protobuf.StringValue) returns (google.protobuf.StringValue);
+}
